@@ -36,34 +36,68 @@ body {
 
   .header {
     margin-bottom: 8em;
+  }
 
-    .main__h1 {
-      font-size: 4.5em;
-      text-transform: uppercase;
-      width: inherit;
-      letter-spacing: 18px;
-      line-height: 75px;
+  .main__h1 {
+    font-size: 4.5em;
+    text-transform: uppercase;
+    width: inherit;
+    letter-spacing: 18px;
+    line-height: 75px;
 
-      .special {
-        font-weight: $fontlight;
+    .special {
+      font-weight: $fontlight;
+      color: #ce9797
+    }
+  }
+
+  .main__message {
+    font-size: 16px;
+    line-height: 2em;
+    width: 60%;
+    color: #ce9797;
+  }
+
+  .main__email {
+
+    ::placeholder,
+    :-ms-input-placeholder,
+    ::-ms-input-placeholder {
+      color: #ce979780;
+    }
+
+    .email {
+      margin-top: 2em;
+      margin-bottom: 2em;
+      width: 60%;
+      padding: 1.7em;
+      border: 1px solid #ce979780;
+      border-radius: 34px;
+      background: border-box;
+
+      ::placeholder,
+      :-ms-input-placeholder,
+      ::-ms-input-placeholder {
+        color: #ce979780;
       }
     }
   }
-}
 
-.main_photo {
-  display: block;
-  z-index: 5;
-  background-image: url("../images/hero-desktop.jpg");
 
-  align-self: flex-end;
+  .main_photo {
+    display: block;
+    z-index: 5;
+    background-image: url("../images/hero-desktop.jpg");
 
-  .hero_photo {
-    position: relative;
-    right: 0;
+    align-self: flex-end;
+
+    .hero_photo {
+      position: relative;
+      right: 0;
+    }
   }
-}
 
-.footer {
-  width: 50%;
-}
+  .footer {
+    width: 50%;
+    text-align: center;
+  }
