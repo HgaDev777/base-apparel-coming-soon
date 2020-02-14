@@ -1,0 +1,69 @@
+// Variables
+$Desktop-width: 1440px;
+$Mobile-width: 375px;
+$main_font_size: 16px;
+$main_font_fam: "Josefin Sans",
+sans-serif;
+$fontBolder: 600;
+$fontBold: 400;
+$fontlight: 300;
+
+html {
+  width: 100%;
+}
+
+body {
+  max-width: $Desktop-width;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-size: cover;
+  font-family: $main_font_fam;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  box-sizing: border-box;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5em;
+  margin-top: 5em;
+
+  .header {
+    margin-bottom: 8em;
+
+    .main__h1 {
+      font-size: 4.5em;
+      text-transform: uppercase;
+      width: inherit;
+      letter-spacing: 18px;
+      line-height: 75px;
+
+      .special {
+        font-weight: $fontlight;
+      }
+    }
+  }
+}
+
+.main_photo {
+  display: block;
+  z-index: 5;
+  background-image: url("../images/hero-desktop.jpg");
+
+  align-self: flex-end;
+
+  .hero_photo {
+    position: relative;
+    right: 0;
+  }
+}
+
+.footer {
+  width: 50%;
+}
