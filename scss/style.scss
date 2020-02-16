@@ -120,21 +120,23 @@ body {
     font-size: 16px;
     font-style: italic;
   }
+}
 
-  .main_photo {
-    display: flex;
-    align-self: flex-end;
+.main__photo {
+  display: flex;
+  align-self: flex-end;
 
-    .hero_photo {
-      position: relative;
-      right: -20px;
-      height: 100%;
-    }
-  }
-
-  .footer {
-    width: 50%;
-    position: absolute;
-    bottom: -1em;
+  .hero__photo {
+    position: relative;
+    right: 0;
+    height: 100%;
   }
 }
+
+.footer {
+  width: 50%;
+  position: absolute;
+  bottom: -1em;
+}
+
+// Mobile: 375px
