@@ -125,12 +125,12 @@ body {
 .main__photo {
   display: flex;
   align-self: flex-end;
+}
 
-  .hero__photo {
-    position: relative;
-    right: 0;
-    height: 100%;
-  }
+.hero__photo {
+  position: relative;
+  right: 0;
+  height: 101%;
 }
 
 .footer {
