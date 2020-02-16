@@ -91,7 +91,7 @@ body {
       border-radius: 34px;
       border: none;
       padding: 1.5em;
-      background: linear-gradient(-45deg, #ee7752, hsl(0, 36%, 70%), hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+      background: linear-gradient(-45deg, #ee7752, hsl(0, 36%, 70%), hsl(0, 80%, 86%), hsl(0, 20%, 33%), hsl(0, 6%, 24%));
       background-size: 400% 400%;
       animation: gradient 15s ease infinite;
       width: 10em;
@@ -112,9 +112,7 @@ body {
 
 
   .main_photo {
-    display: block;
-    z-index: 5;
-    background-image: url("../images/hero-desktop.jpg");
+    display: flex;
     align-self: flex-end;
 
     .hero_photo {
