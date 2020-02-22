@@ -22,10 +22,17 @@ body {
     Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
   background-image: url("../images/bg-pattern-desktop.svg");
   background-size: cover;
+  background-repeat: no-repeat;
   font-family: $main_font_fam;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+
+  @media only screen and (max-width: 375px) {
+    max-width: 375px;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .main {
@@ -38,6 +45,21 @@ body {
 
   .header {
     margin-bottom: 8em;
+    // Media Query for Header
+    @media only screen and (max-width: 375px) {
+      order: 1;
+      width: 100%;
+    }
+  }
+
+  .hero__mobile {
+    display: none;
+
+    @media only screen and (max-width: 375px) {
+      display: block;
+      width: 100%;
+      order: 2;
+    }
   }
 
   .main__h1 {
@@ -46,10 +68,33 @@ body {
     width: inherit;
     letter-spacing: 18px;
     line-height: 75px;
-
+    //Media Query for Main__h1
+    @media only screen and (max-width: 375px) {
+      width: 100%;
+      order: 3;
+    }
     .special {
       font-weight: $fontlight;
       color: #ce9797;
+    }
+
+    .hero__photo {
+      position: relative;
+      right: 0;
+      height: 101%;
+      // Media Query for Desktop Photo
+      @media only screen and (max-width: 375px) {
+        display: none;
+      }
+    }
+
+    .hero__mobile {
+      display: none;
+      // Media Query for Mobile Photo
+      @media only screen and (max-width: 375px) {
+        display: block;
+        order: 2;
+      }
     }
   }
 
@@ -120,17 +165,28 @@ body {
     font-size: 16px;
     font-style: italic;
   }
+
+  // Media Query Styles for Main Section
+  @media only screen and (max-width: 375px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .main__photo {
   display: flex;
   align-self: flex-end;
-}
 
-.hero__photo {
-  position: relative;
-  right: 0;
-  height: 101%;
+  .hero__photo {
+    position: relative;
+    right: 0;
+    height: 101%;
+
+    @media only screen and (max-width: 375px) {
+      display: none;
+    }
+  }
 }
 
 .footer {
@@ -140,3 +196,13 @@ body {
 }
 
 // Mobile: 375px
+// @media only screen and (max-width: 375px) {
+
+// }
+
+// OR
+
+// Everything between 320 and 1400
+// @media only screen and (min-width: 320px) and (max-width: 1400px) {
+
+// }
