@@ -2,7 +2,8 @@
 $Desktop-width: 1440px;
 $Mobile-width: 375px;
 $main_font_size: 16px;
-$main_font_fam: "Josefin Sans", sans-serif;
+$main_font_fam: "Josefin Sans",
+sans-serif;
 $fontBolder: 600;
 $fontBold: 400;
 $fontlight: 300;
@@ -43,8 +44,16 @@ body {
   margin-left: 5em;
   margin-top: 5em;
 
+  // Media Query Styles for Main Section
+  @media only screen and (max-width: 375px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .header {
     margin-bottom: 8em;
+
     // Media Query for Header
     @media only screen and (max-width: 375px) {
       order: 1;
@@ -68,11 +77,13 @@ body {
     width: inherit;
     letter-spacing: 18px;
     line-height: 75px;
+
     //Media Query for Main__h1
     @media only screen and (max-width: 375px) {
       width: 100%;
       order: 3;
     }
+
     .special {
       font-weight: $fontlight;
       color: #ce9797;
@@ -82,6 +93,7 @@ body {
       position: relative;
       right: 0;
       height: 101%;
+
       // Media Query for Desktop Photo
       @media only screen and (max-width: 375px) {
         display: none;
@@ -90,6 +102,7 @@ body {
 
     .hero__mobile {
       display: none;
+
       // Media Query for Mobile Photo
       @media only screen and (max-width: 375px) {
         display: block;
@@ -135,14 +148,12 @@ body {
       border-radius: 34px;
       border: none;
       padding: 1.5em;
-      background: linear-gradient(
-        -45deg,
+      background: linear-gradient(-45deg,
         #ee7752,
         hsl(0, 36%, 70%),
         hsl(0, 80%, 86%),
         hsl(0, 20%, 33%),
-        hsl(0, 6%, 24%)
-      );
+        hsl(0, 6%, 24%));
       background-size: 400% 400%;
       animation: gradient 15s ease infinite;
       -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -154,6 +165,7 @@ body {
       right: 10.4em;
       outline: none;
     }
+
     .email__button:hover {
       cursor: pointer;
       animation: none;
@@ -164,13 +176,6 @@ body {
     color: #ce979780;
     font-size: 16px;
     font-style: italic;
-  }
-
-  // Media Query Styles for Main Section
-  @media only screen and (max-width: 375px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 }
 
