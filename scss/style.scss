@@ -28,12 +28,6 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-
-  @media only screen and (min-width: 375px) and (max-width: 1400px) {
-    max-width: 375px;
-    display: flex;
-    justify-content: center;
-  }
 }
 
 .main {
@@ -45,30 +39,13 @@ body {
   margin-top: 5em;
 
   // Media Query Styles for Main Section
-  @media only screen and (max-width: 375px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+  // @media only screen and (min-width: 375px) and (max-width: 1400px) {
+
+  // }
 
   .header {
     margin-bottom: 8em;
 
-    // Media Query for Header
-    @media only screen and (max-width: 375px) {
-      order: 1;
-      width: 100%;
-    }
-  }
-
-  .hero__mobile {
-    display: none;
-
-    @media only screen and (max-width: 375px) {
-      display: block;
-      width: 100%;
-      order: 2;
-    }
   }
 
   .main__h1 {
@@ -78,108 +55,82 @@ body {
     letter-spacing: 18px;
     line-height: 75px;
 
-    //Media Query for Main__h1
-    @media only screen and (max-width: 375px) {
-      width: 100%;
-      order: 3;
-    }
-
     .special {
       font-weight: $fontlight;
       color: #ce9797;
     }
 
-    .hero__photo {
-      position: relative;
-      right: 0;
-      height: 101%;
-
-      // Media Query for Desktop Photo
-      @media only screen and (max-width: 375px) {
-        display: none;
-      }
-    }
-
-    .hero__mobile {
-      display: none;
-
-      // Media Query for Mobile Photo
-      @media only screen and (max-width: 375px) {
-        display: block;
-        order: 2;
-      }
-    }
-  }
-
-  .main__message {
-    font-size: 16px;
-    line-height: 2em;
-    width: 60%;
-    color: #ce9797;
-  }
-
-  .main__email {
-    .email {
-      margin-top: 2em;
-      margin-bottom: 2em;
-      width: 60%;
-      padding: 1.7em;
-      border: 1px solid #ce979780;
-      border-radius: 34px;
-      background: border-box;
-      outline: none;
-    }
-
-    .email__button {
-      @keyframes gradient {
-        0% {
-          background-position: 0% 50%;
-        }
-
-        50% {
-          background-position: 100% 50%;
-        }
-
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-
-      border-radius: 34px;
-      border: none;
-      padding: 1.5em;
-      background: linear-gradient(-45deg,
-        #ee7752,
-        hsl(0, 36%, 70%),
-        hsl(0, 80%, 86%),
-        hsl(0, 20%, 33%),
-        hsl(0, 6%, 24%));
-      background-size: 400% 400%;
-      animation: gradient 15s ease infinite;
-      -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      width: 10em;
-      position: relative;
-      top: 3px;
-      right: 10.4em;
-      outline: none;
-    }
-
-    .email__button:hover {
-      cursor: pointer;
-      animation: none;
-    }
-  }
-
-  input::placeholder {
-    color: #ce979780;
-    font-size: 16px;
-    font-style: italic;
   }
 }
 
-.main__photo {
+.main__message {
+  font-size: 16px;
+  line-height: 2em;
+  width: 60%;
+  color: #ce9797;
+}
+
+.main__email {
+  .email {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 60%;
+    padding: 1.7em;
+    border: 1px solid #ce979780;
+    border-radius: 34px;
+    background: border-box;
+    outline: none;
+  }
+
+  .email__button {
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    border-radius: 34px;
+    border: none;
+    padding: 1.5em;
+    background: linear-gradient(-45deg,
+      #ee7752,
+      hsl(0, 36%, 70%),
+      hsl(0, 80%, 86%),
+      hsl(0, 20%, 33%),
+      hsl(0, 6%, 24%));
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 10em;
+    position: relative;
+    top: 3px;
+    right: 10.4em;
+    outline: none;
+  }
+
+  .email__button:hover {
+    cursor: pointer;
+    animation: none;
+  }
+}
+
+input::placeholder {
+  color: #ce979780;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.main__photos {
   display: flex;
   align-self: flex-end;
 
@@ -187,10 +138,10 @@ body {
     position: relative;
     right: 0;
     height: 101%;
+  }
 
-    @media only screen and (max-width: 375px) {
-      display: none;
-    }
+  .hero__mobile {
+    display: none;
   }
 }
 
